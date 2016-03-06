@@ -14,8 +14,6 @@ import javax.persistence.Entity;
 import javax.persistence.Inheritance;
 import javax.persistence.Table;
 
-import org.eclipse.persistence.annotations.Mutable;
-
 import com.druids_garden.model.AbstractEntity;
 
 /**
@@ -35,7 +33,6 @@ public abstract class Period extends AbstractEntity implements Serializable {
 
 	@Column(name = "dtype", insertable = false, updatable = false, nullable = false, unique = false)
 	@Basic(fetch = EAGER, optional = false)
-	@Mutable(false)
 	private String dtype;
 
 	// Constructors

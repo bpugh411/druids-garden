@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>druids-garden</artifactId>
+		<groupId>com.druids-garden</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>ear</artifactId>
+	<packaging>ear</packaging>
+	<name>Druid's Garden: EAR Module</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.druids-garden</groupId>
+			<artifactId>war</artifactId>
+			<type>war</type>
+		</dependency>
+		<dependency>
+			<groupId>com.druids-garden</groupId>
+			<artifactId>ejb</artifactId>
+			<type>ejb</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>druids-garden</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+<!-- 
+				<version>${maven-ear-plugin.version}</version>
+				<inherited>true</inherited>
+				<configuration>
+					<applicationName>Druid's Garden</applicationName>
+					<applicationId>druids-garden</applicationId>
+					<displayName>Druid's Garden (${project.version})</displayName>
+					<version>7</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<skinnyWars>true</skinnyWars>
+					<outputDirectory>${project.build.directory}/artifact</outputDirectory>
+					<modules>
+						<ejbModule>
+							<groupId>com.druids-garden</groupId>
+							<artifactId>ejb</artifactId>
+							<bundleDir>/</bundleDir>
+						</ejbModule>
+						<webModule>
+							<groupId>com.druids-garden</groupId>
+							<artifactId>war</artifactId>
+							<contextRoot>/</contextRoot>
+							<bundleDir>/</bundleDir>
+						</webModule>
+					</modules>
+				</configuration>
+ -->
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+	</profiles>
+
+</project>

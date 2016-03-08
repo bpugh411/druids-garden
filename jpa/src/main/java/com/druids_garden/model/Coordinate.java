@@ -101,4 +101,5 @@ public class Coordinate extends AbstractEntity implements Serializable, Comparab
 		return this.getClass().getSimpleName() + " [id=" + getId() + ", row=" + getRow() + ", col=" + getCol() + "]";
 	}
 
+
 }
